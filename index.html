@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>蒸汽时光pwa</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" sizes="192x192" href="ic_launcher.png">
+</head>
+
+<body>
+  <h3>蒸汽时光</h3>
+  <button onclick="startScan()">搜索蓝牙</button>
+  <p id="pp">状态1</p>
+</body>
+<script>
+  // 检测浏览器是否支持SW
+  if (navigator.serviceWorker != null) {
+    navigator.serviceWorker.register('sw.js')
+      .then(function (registartion) {
+
+      })
+  }
+  function startScan() {
+    if (navigator.bluetooth.requestDevice != undefined)
+      document.getElementById("pp").innerText = "start"
+    navigator.bluetooth.requestDevice({ acceptAllDevices: true }).then(device => {
+      document.getElementById("pp").innerText = "startScan"
+    }).catch(e => {
+      document.getElementById("pp").innerText = JSON.stringify(e)
+    })
+  }
+</script>
+
+</html>
