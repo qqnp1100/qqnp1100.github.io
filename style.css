@@ -1,0 +1,137 @@
+/* Reset & Basic Styles */
+:root {
+    --primary-color: #007aff;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --footer-bg: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--card-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-bottom: 1rem;
+    padding-left: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: auto;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #666;
+    text-decoration: none;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
